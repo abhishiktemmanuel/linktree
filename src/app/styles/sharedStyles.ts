@@ -1,10 +1,29 @@
 import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+`;
+
 
 export const Container = styled.div`
   min-height: 100vh;
   width: 100%;
+  overflow-y: auto;
+  position: relative;
+  padding: 0;
+  margin: 0;
 `;
-
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
@@ -12,10 +31,11 @@ export const Content = styled.div`
   padding: 64px 16px 32px;
   max-width: 580px;
   margin: 0 auto;
-  height: 100%;
+  width: 100%;
+  overflow-y: auto;
   position: relative;
+  padding-bottom: 80px;
 `;
-
 export const LoadingWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -115,18 +135,7 @@ export const ShareOverlay = styled.div`
 `;
 
 
-export const Icon = styled.div<{icon: string}>`
-  position: absolute;
-  left: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 32px;
-  height: 32px;
-  background-color: currentColor;
-  mask-image: url(${props => props.icon});
-  mask-size: 100%;
-  border-radius: 50%;
-`;
+
 
 export const Title = styled.span`
   font-bold;

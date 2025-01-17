@@ -32,39 +32,55 @@ const ShareCard: FC<ShareCardProps> = ({ url, title = '', className = '' }) => {
   };
 
   return (
-    <Card className={`max-w-md ${className}`}>
-      <CardHeader className="flex justify-between">
-        <h2 className="text-xl font-semibold">Share this link</h2>
+    <Card 
+      className={`max-w-md backdrop-blur-sm bg-white/10 dark:bg-black/10 ${className}`}
+      shadow="lg"
+    >
+      <CardHeader className="px-6 flex justify-between border-b border-gray-100/20 dark:border-gray-800/20">
+        <h2 className="text-xl pr-4 font-bold text-white">
+          Share {title}
+        </h2>
         <Button
           isIconOnly
-          variant="light"
+          variant="ghost"
           onClick={handleCopyLink}
           aria-label="Copy Link"
+          className="hover:bg-gray-100/20  dark:hover:bg-gray-800/20"
         >
-          <FontAwesomeIcon icon={faClipboard} />
+          <FontAwesomeIcon icon={faClipboard} className="text-gray-600 dark:text-gray-300" />
         </Button>
       </CardHeader>
       
-      <CardBody>
-        <div className="grid grid-cols-5 gap-4">
+      <CardBody className="p-6">
+        <div className="grid grid-cols-5 gap-6">
           <FacebookShareButton url={url} title={title}>
-            <FacebookIcon size={48} round className="hover:opacity-80 transition-opacity" />
+            <div className="transform transition-all hover:scale-110 hover:-translate-y-1">
+              <FacebookIcon size={48} round className="drop-shadow-lg" />
+            </div>
           </FacebookShareButton>
 
           <TwitterShareButton url={url} title={title}>
-            <TwitterIcon size={48} round className="hover:opacity-80 transition-opacity" />
+            <div className="transform transition-all hover:scale-110 hover:-translate-y-1">
+              <TwitterIcon size={48} round className="drop-shadow-lg" />
+            </div>
           </TwitterShareButton>
 
           <WhatsappShareButton url={url} title={title}>
-            <WhatsappIcon size={48} round className="hover:opacity-80 transition-opacity" />
+            <div className="transform transition-all hover:scale-110 hover:-translate-y-1">
+              <WhatsappIcon size={48} round className="drop-shadow-lg" />
+            </div>
           </WhatsappShareButton>
 
           <LinkedinShareButton url={url} summary={title}>
-            <LinkedinIcon size={48} round className="hover:opacity-80 transition-opacity" />
+            <div className="transform transition-all hover:scale-110 hover:-translate-y-1">
+              <LinkedinIcon size={48} round className="drop-shadow-lg" />
+            </div>
           </LinkedinShareButton>
 
           <TelegramShareButton url={url} title={title}>
-            <TelegramIcon size={48} round className="hover:opacity-80 transition-opacity" />
+            <div className="transform transition-all hover:scale-110 hover:-translate-y-1">
+              <TelegramIcon size={48} round className="drop-shadow-lg" />
+            </div>
           </TelegramShareButton>
         </div>
       </CardBody>

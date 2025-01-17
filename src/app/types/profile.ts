@@ -1,7 +1,8 @@
+import { IconType } from "react-icons";
 export interface ProfileLink {
     title: string;
     url: string;
-    icon: string;
+    icon: IconType; 
   }
   
   export interface ProfileData {
