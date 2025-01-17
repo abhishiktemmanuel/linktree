@@ -114,43 +114,6 @@ export const ShareOverlay = styled.div`
   z-index: 1000;
 `;
 
-export const ShareCardWrapper = styled.div`
-  position: relative;
-  width: 90%;
-  max-width: 500px;
-  background: white;
-  border-radius: 16px;
-  padding: 24px;
-  animation: slideUp 0.3s ease-out;
-  
-  @keyframes slideUp {
-    from {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-`;
-
-export const CloseButton = styled.button`
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #333;
-  padding: 8px;
-  border-radius: 50%;
-  
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-`;
 
 export const Icon = styled.div<{icon: string}>`
   position: absolute;
