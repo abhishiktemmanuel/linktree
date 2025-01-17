@@ -11,22 +11,22 @@ const SocialsIconLink: React.FC = () => {
   const socials: Social[] = [
     {
       url: "https://www.linkedin.com/in/abhishikt-emmanuel-prakash-651a43174/",
-      icon: <BsLinkedin size={28} />,
+      icon: <BsLinkedin size={26} />,
       alt: "LinkedIn"
     },
     {
       url: "https://www.instagram.com/iam_abhishikt",
-      icon: <BsInstagram size={28} />,
+      icon: <BsInstagram size={26} />,
       alt: "InstaBsam"
     },
     {
       url: "https://x.com/iam_abhishikt",
-      icon: <BsTwitterX size={28} />,
+      icon: <BsTwitterX size={26} />,
       alt: "Twitter"
     },
     {
       url: "https://open.spotify.com/user/sfw39buctjue4ben2j2klngpi",
-      icon: <BsSpotify size={28} />,
+      icon: <BsSpotify size={26} />,
       alt: "Spotify"
     }
   ];

@@ -75,8 +75,8 @@ const LinkPage: FC = () => {
       <FadeInContent $isVisible={profileLoaded}>
         <Content>
           <Avatar name={profile.name} avatarUrl={profile.avatar} />
-          <h1 className="text-2xl font-bold mb-2">{profile.name}</h1>
-          <p className="text-lg">{profile.description}</p>
+          <h1 className="text-xl text-center font-bold mb-2">{profile.name}</h1>
+          <p className="text-base">{profile.description}</p>
           <SocialsIconLink />
           {profile.links.map((link, index) => (
             <LinkPreviewContainer 
