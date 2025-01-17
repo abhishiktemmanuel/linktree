@@ -1,29 +1,13 @@
 import styled from 'styled-components';
-import { createGlobalStyle } from 'styled-components';
-
-export const GlobalStyle = createGlobalStyle`
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-
-  body {
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-`;
-
 
 export const Container = styled.div`
-  min-height: 100vh;
   width: 100%;
-  overflow-y: auto;
+  min-height: 100vh;
+  padding: 1rem;
   position: relative;
-  padding: 0;
-  margin: 0;
+  z-index: 1;
 `;
+
 export const Content = styled.div`
   display: flex;
   flex-direction: column;

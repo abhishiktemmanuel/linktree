@@ -3,7 +3,7 @@
 import { FC, useState, useEffect } from 'react';
 import Head from 'next/head';
 import { FaGithub } from 'react-icons/fa';
-import { MdWeb, MdCode, MdDeveloperMode } from 'react-icons/md';
+import { MdWeb,MdOutlineCameraAlt, MdDeveloperMode } from 'react-icons/md';
 import { SiBlogger } from 'react-icons/si';
 import { Container, Content, FadeInContent, LoadingWrapper, LoadingSpinner } from '../styles/sharedStyles';
 import Avatar from './Avatar';
@@ -25,7 +25,7 @@ const LinkPage: FC = () => {
     links: [
       { title: 'Portfolio', url: 'http://www.abhishikt.com', icon: MdWeb },
       { title: 'GitHub', url: 'https://github.com/abhishiktemmanuel', icon: FaGithub },
-      { title: 'Unsplash', url: 'https://unsplash.com/@iam_abhishikt', icon: MdCode },
+      { title: 'Unsplash', url: 'https://unsplash.com/@iam_abhishikt', icon: MdOutlineCameraAlt  },
       { title: 'Google Developer', url: 'https://developers.google.com/profile/u/111588099682047412402', icon: MdDeveloperMode},
       { title: 'Blog', url: 'https://blog.abhishikt.com', icon: SiBlogger },
 
