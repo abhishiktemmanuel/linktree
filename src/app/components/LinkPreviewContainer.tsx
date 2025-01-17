@@ -28,16 +28,13 @@ const LinkPreviewContainer: FC<LinkProps> = ({ link, onShare }) => {
   return (
     <div className="mb-4 relative">
       <LinkPreview url={link.url} className="w-full">
-        <LinkContainer
-          onClick={handleLinkClick}
-          className="flex items-center justify-between p-4 bg-transparent border border-white rounded-lg hover:bg-white hover:text-black transition-all duration-200"
-        >
-          <div className="flex items-center gap-3 flex-1 text-white hover:text-black">
+        <LinkContainer onClick={handleLinkClick}>
+          <div>
             <Icon 
               icon={link.icon} 
               className="w-6 h-6"
             />
-            <span className="font-medium truncate">{link.title}</span>
+            <span className="font-bold truncate">{link.title}</span>
           </div>
           
           <ThreeDotsButton
@@ -53,9 +50,9 @@ const LinkPreviewContainer: FC<LinkProps> = ({ link, onShare }) => {
               xmlns="http://www.w3.org/2000/svg"
               className="text-current" // This will inherit the text color
             >
-              <circle cx="12" cy="12" r="2" fill="currentColor" />
-              <circle cx="19" cy="12" r="2" fill="currentColor" />
-              <circle cx="5" cy="12" r="2" fill="currentColor" />
+              <circle cy="12" cx="12" r="2" fill="currentColor" />
+              <circle cy="19" cx="12" r="2" fill="currentColor" />
+              <circle cy="5" cx="12" r="2" fill="currentColor" />
             </svg>
           </ThreeDotsButton>
         </LinkContainer>
